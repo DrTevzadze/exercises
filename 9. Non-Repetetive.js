@@ -11,7 +11,6 @@ const firstNonChar = (str) => {
       newMap.set(char, 1);
     }
   }
-
   for (const [key, value] of newMap) {
     if (value === 1) {
       return str.indexOf(key);
