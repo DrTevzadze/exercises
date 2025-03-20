@@ -3,7 +3,7 @@
 const queries = [3, 2, 1, 2, 6];
 
 const minWaitingTime = (arr) => {
-  const sortedArr = arr.sort(); // 1, 2, 2, 3, 6
+  const sortedArr = arr.sort((a, b) => a - b); // 1, 2, 2, 3, 6
 
   let totalTime = 0;
   let sum = 0;
