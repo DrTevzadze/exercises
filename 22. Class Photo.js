@@ -9,7 +9,7 @@
 // Sample input:redShirtHeights = [5, 8, 1, 3, 4], blueShirtHeights = [6, 9, 2, 4, 5] Sample output: true
 
 const redShirtHeights = [5, 8, 1, 3, 4];
-const blueShirtHeights = [6, 9, 2, 4, 5];
+const blueShirtHeights = [6, 9, 2, 4, 4];
 
 const classPhoto = (redShirt, blueShirt) => {
   const sortedRed = redShirt.sort((a, b) => a - b);
@@ -18,7 +18,7 @@ const classPhoto = (redShirt, blueShirt) => {
   let bottomRow = topRow === sortedRed ? sortedBlue : sortedRed;
 
   for (let i = 0; i < topRow.length; i++) {
-    if (topRow[i] < bottomRow[i]) return false;
+    if (topRow[i] <= bottomRow[i]) return false;
   }
   return true;
 };
